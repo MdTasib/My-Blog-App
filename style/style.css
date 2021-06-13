@@ -12,8 +12,61 @@ header {
     min-height: 350px;
     background: blue;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/banner.jpeg');
+    background-size: cover;
+    position: relative;
 }
 
+header > * {
+    z-index: 1;
+}
+
+header::after {
+    content: '';
+    background-color: black;
+    opacity: .7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.profile-image img{
+    border-radius: 50%;
+    width: 150px;
+    height: 180px;
+}
+
+.profile-name {
+    font-size: 44px;
+    font-weight: 700;
+    font-family: monospace;
+    margin: 10px 0px;
+}
+
+.subtext {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.main {
+    background-color: yellow;
+    margin-top: 32px;
+    height: 100px;
+}
+
+.main-container {
+    min-width: 600px;
+    max-width: 750px;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
 
 footer {
     min-height: 100px;
@@ -24,4 +77,10 @@ footer {
     align-items: center;
     margin-top: 40px;
     font-size: 14px;
+}
+
+footer strong {
+    padding: 0px 10px;
+    color: red;
+    font-size: 24px;
 }
