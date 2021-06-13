@@ -55,17 +55,12 @@ header::after {
 }
 
 .main {
-    background-color: yellow;
     margin-top: 32px;
-    height: 100px;
 }
 
 .main-container {
-    min-width: 600px;
-    max-width: 750px;
-    width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 footer {
@@ -83,4 +78,46 @@ footer strong {
     padding: 0px 10px;
     color: red;
     font-size: 24px;
+}
+
+.post {
+    display: flex;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.post-image {
+    flex-basis: 40%;
+    background-image: url(https://cdn.pixabay.com/photo/2020/05/23/20/08/book-5211309__340.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.post-content {
+    flex-basis: 60%;
+    padding: 20px;
+}
+
+.post-date {
+    color: gray;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.post-title {
+    font-weight: bold;
+    margin: 5px 0px;
+    font-size: 24px;
+    color: #333;
+}
+
+.post-text {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.post-title h4 {
+    margin: 0;
 }
