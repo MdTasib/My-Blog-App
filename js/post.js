@@ -11,11 +11,33 @@ window.onload = () => {
     getPost();
 }
 
+const getPostIdParam = () => {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    return urlParams.get('id');
+}
+
 const getPost = () => {
+    const postId = getPostIdParam();
     // CODE GOES HERE
+    const url = `${API_URL}${postId}`;
+    fetch(url, {
+        method: 'GET'
+    }).then(response => {
+        return response.json();
+    }).then(data => {
+        buildPost(data);
+    })
+
 }
 
 const buildPost = (data) => {
-    // HINT: Convert the date number to a Date string 
+    const postDate = new Date(parseInt(data.added_date)).toDateString();
+    const postImage = `${API_BASE_URL}${data.post_image}`;
+    // HINT: Convert the date number to a Date string
+    document.querySelector('header').style.backgroundImage = `url(${postImage})`;
+    document.getElementById('individual-post-title').innerText = data.title;
+    document.getElementById('individual-post-date').innerText = `Publised on ${postDate}`;
+    document.getElementById('individual-post-content').innerText = data.content;
 }
 
