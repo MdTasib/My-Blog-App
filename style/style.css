@@ -108,7 +108,6 @@ footer strong {
 
 .post-image {
     flex-basis: 40%;
-    background-image: url(https://cdn.pixabay.com/photo/2020/05/23/20/08/book-5211309__340.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -160,7 +159,13 @@ footer strong {
     box-shadow: 0px 0rem 7px 7px #000000;
 }
 
+
+.navigation {
+    margin: 40px 0px;
+}
+
 .navigation a {
+    margin: 20px 0px;
     text-decoration: none;
     color: #333;
     border: 1px solid #333;
@@ -169,9 +174,11 @@ footer strong {
     border-radius: 7px;
     font-weight: 600;
     transition: all 0.25s ease;
+    box-shadow: 0px 0rem 4px 4px gray;
 }
 
 .navigation a:hover {
     background: #333;
     color: white;
+    box-shadow: 0px 0rem 7px 7px #000000;
 }
